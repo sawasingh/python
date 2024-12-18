@@ -1,0 +1,160 @@
+mylist= [10,201,401,210,3,4,5,8]
+for i in mylist:
+    if(i%2==0):
+        print(i)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# Write the even elements from the list
+mylist= [10,201,401,210,3,4,5,8]
+
+size = len(mylist)
+for i in range(0,size):
+    if(mylist[i]%2==0):
+        print(mylist[i])
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# print all the odd numbers from the list.
+"""
+mylist= [10,201,401,210,3,4,5,8]
+for i in mylist:
+    if(i%2!=0):
+        print(i)
+"""
+mylist= [10,201,401,210,3,4,5,8]
+size = len(mylist)
+for i in range(0,size):
+    if(mylist[i]%2!=0):
+        print(mylist[i])
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+mylist= [10,201,401,210,3,4,5,8]
+max = mylist[0]
+for i in mylist:
+    if(i>max):
+        max=i
+print(max)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+mylist= [10,201,401,210,3,4,5,8]
+size = len(mylist)
+max=mylist[0]
+for i in range(0,size):
+    if(mylist[i]>max):
+        max = mylist[i]
+print(max)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# Take a list and print only the integer data type
+mylist = [1,54,78,56,74,"Yash", "Tushar", 12.1]
+for i in mylist:
+    if(type(i)==int):
+        print(i)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# Take a list and find out a minumum value all number in list is numeric value
+mylist= [10,201,401,210,4,5,3]
+min = mylist[0]
+for i in mylist:
+    if(i<min):
+        min=i
+print(min)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# Take a list and find out the second  highest number
+mylist= [10,201,401,210,400, 3,4,5,8]
+"""
+grater = 0
+second_grater = 0
+
+for i in mylist:
+    if i > grater:
+        second_grater = grater
+        grater = i
+    elif i > second_grater and i!=grater:
+        second_grater = i
+print(second_grater)
+"""
+for i in range(0,2):
+    for j in range(i+1,len(mylist)):
+        if(mylist[j]>mylist[i]):
+            temp = mylist[i]
+            mylist[i] = mylist[j]
+            mylist[j]=temp
+
+print(mylist[0], mylist[1])
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# Take a list and print all the duplicates eliments
+"""
+mylist = [10, 201, 201, 401, 210, 400, 400, 400, 3, 3, 3, 3, 4, 5, 8]
+duplicate = []
+for i in mylist:
+    if mylist.count(i)>1:
+        duplicate.append(i)
+print(duplicate)
+"""
+
+mylist = [10, 201, 201, 401, 210, 400, 400, 400, 3, 3, 3, 3, 4, 5, 8]
+duplcate = []
+for i in range(0,len(mylist)):
+    for j in range(i+1,len(mylist)):
+        if(mylist[i]==mylist[j] and mylist[i] not in duplcate):
+            duplcate.append(mylist[i])
+            break
+print(duplcate)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# Swaping two elements from the list.
+mylist= [10,201,401,210,400, 3,4,5,8]
+
+index1=0
+index2=8
+
+size = len(mylist)
+for i in range(0,size-1):
+    if i == index1:
+        temp = mylist[index1]
+        mylist[index1] = mylist[index2]
+        mylist[index2]=temp
+print("swap list is",mylist)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# reversing elements from the list.
+mylist= [10,201,401,210,400, 3,4,5,8]
+reverselist =[]
+size = len(mylist)
+for i in range(size-1,-1,-1):
+    reverselist.append(mylist[i])
+print(reverselist)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# write a programne that add two elements and give target value.
+
+list = [6, 3, 4, 5,1 ,8]
+target = 9
+
+for i in range(0,len(list)):
+    for j in range(i+1,len(list)):
+        if(list[i]+list[j]==9):
+            print(list[i],list[j]) 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# getting the target value by two pointers
+list = [1, 2, 3,  5, 7, 9, 11]
+result = []
+target = 9
+start = 0
+end = len(list)-1
+while(start<end):
+    if(list[start] + list[end]== target):
+        print([start ,end])
+        
+        break
+        
+    elif(list[start]+list[end]>target):
+        end = end-1
+    else:
+        start = start +1
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+
+        
+
+
+
+
