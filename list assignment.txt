@@ -1,0 +1,126 @@
+l = [1, 2, 4, 11, 12, 45, 85]
+print(l[0:3])
+l[0]=100
+print(l)
+l.append(70)
+print(l)
+l.extend([45,"usha"])
+print(l)
+y=l.pop()
+print(l,y)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+l = [1, 2, 4, 11, 12, 45, 85]
+for i in l:
+    print(i,end="")
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# print even using loop from list
+l = [1, 2, 4, 11, 12, 45, 85]
+for i in l:
+    if(i%2==0):
+        print(i,end="")
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# one more way
+l = [1, 2, 4, 11, 12, 45, 85]
+for i in range(0,len(l)):
+    if(l[i]%2==0):
+        print(l[i]) 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ # Enter odd number form one list to another list
+l = [1, 2, 4, 11, 12, 45, 85]
+new = []
+for i in l:
+    if i%2!=0:
+        new.append(i)
+print(new)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# one more way to Enter odd number form one list to another list
+l = [1, 2, 4, 11, 12, 45, 85]
+new = []
+for i in range(0,len(l)):
+    if i%2!=0:
+        new.append(l[i])
+print(new)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+mylist= [10,201,401,210,3,4,5,8]
+max = mylist[0]
+for i in range(0,len(mylist)):
+    if mylist[i] > max:
+        max = mylist[i]
+print(max)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# Take a list and print only the integer data type
+mylist = [1,54,78,56,74,"Yash", "Tushar", 12.1]
+for i in mylist:
+    if type(i)==int:
+        print(i)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# Take a list and find out a minumum value all number in list is numeric value
+mylist= [10,201,401,210,4,5,3]
+min = mylist[0]
+for i in mylist:
+    i<min
+    min = i
+print(min)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# Take a list and find out the second  highest number
+mylist= [10,201,401,210,400, 3,4,5,8]
+grater = 0
+second_grater = 0
+for i in mylist:
+    if(i>grater):
+        second_grater = grater
+        grater = i
+    elif(i>second_grater and i!=grater):
+        second_grater=i
+print(second_grater)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# if you want second highest value values in list
+mylist= [10,201,401,210,400, 3,4,5,8]
+for i in range(0,2):
+    for j in range(i+1,len(mylist)):
+        if(mylist[j]>mylist[i]):
+            temp  = mylist[i]
+            mylist[i]=mylist[j]
+            mylist[j]=temp
+print(mylist[0],mylist[1])
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# Calculate duplicates from the list
+mylist = [10, 201, 201, 401, 210, 400, 400, 400, 3, 3, 3, 3, 4, 5, 8]
+duplicate = []
+for i in range(0,len(mylist)):
+    for j in range(i+1,len(mylist)):
+        if mylist[i]==mylist[j] and mylist[i] not in duplicate:
+            duplicate.append(mylist[i])
+print(duplicate)
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# Swaping two elements from the list.
+mylist= [10,201,401,210,400, 3,4,5,8]
+index1 =0
+index2=8
+for i in range(0,len(mylist)):
+    if i == index1:
+        temp = mylist[index1]
+        mylist[index1]=mylist[index2]
+        mylist[index2]=temp
+print(mylist)
+
+
+
+
+
+
+
+    
