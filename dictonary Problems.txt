@@ -1,0 +1,252 @@
+dict= {1:"tushar",2:"aman"}
+print(dict[1])
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+dict= {1:"tushar",2:"aman"}
+dict[1]="usha" # update
+dict[3]="isha"# insert
+print(dict)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+dict = {1: 'usha', 2: 'aman', 3: 'isha'}
+dict.pop(1)
+print(dict)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+dict = {2: 'aman', 3: 'isha'}
+dict.update({1:"tushar"})
+print(dict)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+dict = {2: 'aman', 3: 'isha', 1: 'tushar'}
+for i in dict:
+    print(i,dict[i])
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+dict = {2: 'aman', 3: 'isha', 1: 'tushar'}
+for i in dict.keys():
+    print(i)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+dict = {2: 'aman', 3: 'isha', 1: 'tushar'}
+for i in dict.values():
+    print(i)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+dict = {2: 'aman', 3: 'isha', 1: 'tushar'}
+for i in dict.items():
+    key,value = i
+    print(i,key, value)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+dict = {"hello":0}
+for i in range(1,6):
+    dict["hello"]+=1
+print(dict)
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# count of key as a value
+dict = {}
+for i in "ascfghjiaoust":
+    if i not in dict:
+        dict[i]=1
+    else:
+        dict[i]+=1
+print(dict)
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+dict = {"a":0,"e":0,"i":0,"o":0,"u":0}
+for i in "aeioufghiouseri":
+    if i == "a" or i == "e" or i ==  "o" or i == "i" or i == "u":
+        dict[i]+=1
+print(dict)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+dict = {}
+for i in "aerudnfgiieeuooa":
+    if i  in "aeiou":
+       if i not in dict:
+           dict[i]=1
+       else:
+           dict[i]+=1
+print(dict)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# anagram
+dict = {}
+for i in "anagram":
+    if i not in dict:
+        dict[i]=1
+    else:
+        dict[i]+=1
+print(dict)
+dict2 = {}
+for i in "nagaram":
+    if i not in dict2:
+        dict2[i]=1
+    else:
+        dict2[i]+=1
+print(dict2)
+
+print(dict == dict2)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# is there any duplicate value in array or not.
+a = [1, 2, 3, 1]
+duplicate = []
+for i in range(0,len(a)):
+    for j in range(i+1,len(a)):
+        if(a[i]==a[j] and a[i] not in duplicate):
+            duplicate.append(a[i])
+print(duplicate)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+def a(num=[]):
+    dict = {}
+    for i in num:
+        if i not in dict:
+            dict[i]=1
+        else:
+            return True
+    return False
+result = a([1,2,3,1])
+print(result)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# list 1,2,3,4,7,9
+def array(num=[]):
+    
+    taarget = 9
+    for i in range(0,len(num)):
+        for j in range(i+1,len(num)):
+            if num[i] + num[j] == taarget:
+                print(num[i],num[j])
+    
+array([1, 2, 3, 4, 7, 9])
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# list = [1, 2, 3,  5, 7, 9, 11]
+def array(num=[]):
+    l = []
+    start = 0
+    end = len(num)-1
+    target = 9
+    while(start<end):
+        if num[start] + num[end] == target:
+            l.append([num[start],num[end]])
+            break
+        elif num[start] + num[end]>target:
+            end = end-1
+        else:
+            start +=1
+    print(start,end)
+    print(l)
+
+array([1, 2, 3, 5, 7, 9, 11])
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+def array(num=[]):
+    
+    start = 0
+    end = len(num)-1
+    target = 9
+    while(start<end):
+        if num[start] + num[end] == target:
+            print(num[start],num[end])
+            break
+        elif num[start] + num[end]>target:
+            end = end-1
+        else:
+            start +=1
+    print(start,end)
+    
+
+array([1, 2, 3, 5, 7, 9, 11])
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+"""
+l = [2,7,11,15]
+l = [1, 2, 3,  5, 7, 9, 10, 11]
+target = 9 
+start = 0
+end = len(l)-1
+while(start<end):
+    if l[start] + l[end] == target:
+        print(l[start], l[end])
+        break
+        
+    elif(l[start] + l[end] > target):
+        end-=1
+    else:
+        start+=1
+print(start,end)
+"""
+l = [1, 2, 3,  5, 7, 9, 10, 11]
+dict = {}
+target = 9
+start = 0
+end = (len(l))-1
+index = 0
+for e in l:
+    dict[e]=index
+    index+=1
+print(dict)
+
+while(start<end):
+    if (l[start] + l[end] == target):
+        print(f"Indices: {start}, {end} (Values: {l[start]}, {l[end]})")
+        break
+    elif(l[start] + l[end] > target):
+        end -=1
+    else:
+        start+=1
+print(start, end)
+print(dict)
+
+
+
+
+
+
+      
+
+
+    
+        
+
+
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 ]
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
